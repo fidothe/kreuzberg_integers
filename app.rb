@@ -37,7 +37,9 @@ module KreuzbergIntegers
   class App < Sinatra::Base
     register Sinatra::RespondWith
     set :json_encoder, :to_json
-    set :static, true
+    if ENV['RACK_ENV'] != "production"
+      set :static, true
+    end
 
     post '/mint', provides: [:html, :json, :txt] do
       minted = Foundry.mint!
