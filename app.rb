@@ -40,6 +40,7 @@ module KreuzbergIntegers
     if ENV['RACK_ENV'] != "production"
       set :static, true
     end
+    set :views, File.expand_path('views', app_root)
 
     post '/mint', provides: [:html, :json, :txt] do
       minted = Foundry.mint!
