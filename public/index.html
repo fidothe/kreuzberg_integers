@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
     <title>Kreuzberg Integers</title>
+    <link rel="stylesheet" href="/main.css">
+    <script type="text/javascript" src="//use.typekit.net/psi3rds.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   </head>
   <body>
-    <h1>Kreuzberg Integers</h1>
-    <form action="/mint" method="POST">
-      <p><input type="submit" value="Mint!"></p>
-    </form>
+    <div class="container">
+      <h1>Kreuzberg Integers</h1>
+      <p>Hand-crafted-robot minted artisanal Integers (to DIN 1302) since 2012</p>
+      <div class="minter">
+        <form action="/mint" method="POST">
+          <p><input type="submit" value="Mint it"></p>
+        </form>
+      </div>
+      <h2>About</h2>
+      <p>We craft high-quality, guaranteed unique, 64-bit Integers suitable for all your integer needs.</p>
+      <p>Our integers can be retrieved as plain text, JSON, or even as RDF.</p>
+      <h2>API</h2>
+      <p>Naturally, we have an API. Simply POST to <code>http://kreuzbergintegers.com/mint</code>. Choose your output format using the <code>Accept</code> header.</p>
+      <h2>Affiliations</h2>
+      <p>We support the work of our comrades-in-uniqueness at <a href="http://missionintegers.com/">Mission Integers</a>, <a href="http://brooklynintegers.com/">Brooklyn Integers</a>, and <a href="http://londonintegers.com/">London Integers</a></p>
+    </div>
   </body>
 </html>
