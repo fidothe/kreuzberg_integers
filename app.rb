@@ -3,7 +3,7 @@ require 'sinatra/respond_with'
 require 'json'
 require 'data_mapper'
 
-app_root = File.dirname(__FILE__)
+APP_ROOT = File.dirname(__FILE__)
 
 module KreuzbergIntegers
   STARTING_INTEGER = 81726007 # Google 'population of germany', make into number divisible by 11
@@ -40,7 +40,7 @@ module KreuzbergIntegers
     if ENV['RACK_ENV'] != "production"
       set :static, true
     end
-    set :views, File.expand_path('views', app_root)
+    set :views, File.expand_path('views', APP_ROOT)
 
     post '/mint', provides: [:html, :json, :txt] do
       minted = Foundry.mint!
@@ -63,6 +63,6 @@ module KreuzbergIntegers
   end
 end
 
-DataMapper.setup(:default, "sqlite://#{app_root}/integers.sqlite3")
+DataMapper.setup(:default, "sqlite://#{APP_ROOT}/integers.sqlite3")
 DataMapper.finalize
 DataMapper.auto_upgrade!
