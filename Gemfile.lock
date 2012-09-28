@@ -58,6 +58,7 @@ GEM
       dm-core (~> 1.2.0)
     do_sqlite3 (0.10.9)
       data_objects (= 0.10.9)
+    erubis (2.7.0)
     eventmachine (1.0.0)
     fastercsv (1.5.5)
     highline (1.6.15)
@@ -105,6 +106,7 @@ DEPENDENCIES
   capistrano
   data_mapper (~> 1.2.0)
   dm-sqlite-adapter (~> 1.2.0)
+  erubis
   json
   railsless-deploy
   rvm-capistrano
