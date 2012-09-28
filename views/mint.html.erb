@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <h1>Kreuzberg Integers</h1>
-      <h1><%= object.id %></h1>
+      <h1 vocab="http://artisanalintegers.com/schema.rdf" typeof="Integer" property="value"><%= object.id %></h1>
       <p>Minted <%= object.created_at.strftime("%d %B %Y") %></p>
     </div>
   </body>
